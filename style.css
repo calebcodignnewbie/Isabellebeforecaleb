@@ -1,0 +1,218 @@
+/* style.css */
+
+/* 1. Color Palette */
+:root {
+  --pink-light:    #ffe6f9;  /* page background */
+  --pink-lighter:  #fff0fb;  /* section backgrounds */
+  --pink-medium:   #ff99cc;  /* buttons, accents */
+  --pink-dark:     #cc6699;  /* hover states, borders */
+  --text-dark:     #333333;  /* main text */
+}
+
+/* 2. Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: sans-serif;
+  background-color: var(--pink-light);
+  color: var(--text-dark);
+  line-height: 1.5;
+  padding: 1rem;
+}
+
+/* 3. Header & Navigation */
+header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+nav a {
+  margin: 0 0.5rem;
+  text-decoration: none;
+  color: var(--pink-dark);
+  padding: 0.25rem 0.5rem;
+  border-radius: 3px;
+  transition: background 0.2s;
+}
+nav a:hover {
+  background-color: var(--pink-medium);
+  color: #fff;
+}
+
+/* 4. Sections */
+.entry-form,
+.entry-list {
+  background-color: var(--pink-lighter);
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* 5. Textarea & Inputs */
+textarea {
+  width: 100%;
+  height: 80px;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  border: 1px solid var(--pink-medium);
+  border-radius: 4px;
+  resize: vertical;
+  font-size: 1rem;
+}
+select,
+input[type="date"],
+input[type="time"],
+input[type="file"] {
+  padding: 0.5rem;
+  border: 1px solid var(--pink-medium);
+  border-radius: 4px;
+  font-size: 1rem;
+  background: #fff;
+  color: var(--text-dark);
+}
+
+/* 6. Buttons */
+button {
+  background-color: var(--pink-medium);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+button:hover {
+  background-color: var(--pink-dark);
+}
+
+/* 7. Entry & Plan Lists */
+#entries li,
+#plan-list li {
+  background: #fff;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border-left: 4px solid var(--pink-medium);
+  position: relative;
+  border-radius: 4px;
+}
+#entries li .date,
+#plan-list li strong {
+  color: var(--pink-dark);
+  margin-bottom: 0.5rem;
+}
+#entries li .mood {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  font-size: 1.2rem;
+}
+
+/* 8. Gallery Grid */
+#media-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 120px);
+  gap: 0.5rem;
+}
+.media-item {
+  position: relative;
+  border: 2px solid var(--pink-medium);
+  border-radius: 4px;
+  overflow: hidden;
+  background: #fff;
+}
+.media-item img,
+.media-item video {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.media-item button {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  background: rgba(255,255,255,0.8);
+  color: var(--pink-dark);
+  font-weight: bold;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+/* 9. Utility & Responsiveness */
+@media (max-width: 600px) {
+  .controls {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  nav a {
+    display: block;
+    margin: 0.25rem 0;
+  }
+}
+/* style.css */
+
+body {
+  background-color: var(--pink-light); /* fallback color */
+  background-size: 700px auto;
+  background-position: right 130px top 150px ;
+  background-repeat: no-repeat;
+  transition: https://1drv.ms/i/c/569cf00163d10296/EY7eCXzZuIVKirDuV5KBwbYBg639yXmJf4iW7gWbDTYGjw?e=guZdPL 0.3s ease-in-out;
+}
+
+/* Optional: style the uploader control */
+.bg-uploader {
+  padding: 0.5rem;
+  background: rgba(255,255,255,0.8);
+  border-radius: 4px;
+  display: none;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+.bg-uploader input,
+.bg-uploader button {
+  font-size: 0.9rem;
+  padding: 0.3rem 0.6rem;
+}
+/* Frosted-glass effect on form and list */
+.entry-form,
+.entry-list {
+  background: rgba(255, 255, 255, 0.4);       /* adjust opacity (0.0–1.0) */
+  backdrop-filter: blur(100%);                /* how strong the blur is */
+  -webkit-backdrop-filter: blur(10px);        /* Safari support */
+  border-radius: 8px;                         /* optional rounding */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);      /* optional subtle shadow */
+  padding: 1rem;                              /* keep your existing padding */
+  margin-bottom: 1.5rem;                      /* existing spacing */
+}
+/* 1. Constrain width and center panels */
+.entry-form,
+.entry-list {
+  max-width: 600px;      /* maximum width of each box */
+  width: 90%;            /* responsive width on smaller screens */
+  margin: 1.5rem auto;   /* vertical spacing + horizontal centering */
+}
+
+/* 2. (Optional) Tweak padding if you want them even more compact */
+.entry-form,
+.entry-list {
+  padding: 0.75rem;      /* reduce from 1rem to 0.75rem */
+}
+
+/* 3. (Optional) Reduce textarea height */
+.entry-form textarea {
+  height: 60px;          /* smaller writing area */
+}
+.entry-form,
+.entry-list {
+  max-width: 600px;        /* caps width so entries aren’t too wide */
+  width: 90%;              /* keeps panels responsive */
+  margin: 1.5rem 0 1.5rem 1.5rem;  /* top/right/bottom/left */
+  /* margin: 1.5rem 0 1.5rem 0; */ /* alternative: flush‐left with no left indent */
+}

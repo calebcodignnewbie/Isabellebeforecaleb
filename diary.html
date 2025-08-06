@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Isa and Caleb Daily Diary</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Isabelle(she/her) & Caleb(He/Him)
+    </h1>
+    <nav>
+      <a href="diary.html">Diary</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="calendar.html">Calendar</a>
+    </nav>
+  </header>
+
+  <section class="entry-form">
+    <h2>Share your thoughts,baby</h2>
+      <div class="date-selectors">
+    <input
+      type="number"
+      id="day"
+      placeholder="DD"
+      min="1"
+      max="31"
+      maxlength="2"
+    >
+    <input
+      type="number"
+      id="month"
+      placeholder="MM"
+      min="1"
+      max="12"
+      maxlength="2"
+    >
+    <input
+      type="number"
+      id="year"
+      placeholder="YYYY"
+      min="1900"
+      max="2100"
+      maxlength="4"
+    >
+  </div>
+    <textarea id="entry-text" placeholder="Write your thoughts here..."></textarea>
+    <div class="controls">
+      <label for="mood-select">How do you feel today?</label>
+      <select id="mood-select">
+        <option value="😊">😊 Happy</option>
+        <option value="😢">😢 Sad</option>
+        <option value="😡">😡 Angry</option>
+        <option value="😌">😌 Calm</option>
+        <option value="🤔">🤔 Thoughtful</option>
+        <option value="😍">😍 In Love</option>
+        <option value="😴">😴 Tired</option>
+        <option value="🤩">🤩 Excited</option>
+        <option value="😓">😓 Stressed</option>
+      </select>
+      <button id="save-btn">Save</button>
+    </div>
+  </section>
+
+  <section class="entry-list">
+    <h2>Never forgotten</h2>
+    <ul id="entries">
+      <!-- JavaScript injects entries here -->
+    </ul>
+  </section>
+
+  <script src="diary.js"></script>
+</body>
+</html>
+<section class="bg-uploader">
+  <label for="bg-input">Upload Background:</label>
+  <input id="bg-input" type="file" accept="image/*">
+  <button id="bg-btn">Apply</button>
+</section>

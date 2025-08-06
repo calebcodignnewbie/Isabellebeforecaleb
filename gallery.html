@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Isa and Caleb Gallery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Our Gallery</h1>
+    <nav>
+      <a href="diary.html">Diary</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="calendar.html">Calendar</a>
+    </nav>
+  </header>
+
+  <section class="entry-form">
+    <h2>Upload a Memory</h2>
+    <input id="file-input" type="file" accept="image/*,video/*">
+    <button id="upload-btn">Upload</button>
+  </section>
+
+  <section class="entry-list">
+    <h2>Saved Media</h2>
+    <div id="media-gallery">
+      <!-- JavaScript injects thumbnails here -->
+    </div>
+  </section>
+
+  <script src="gallery.js"></script>
+</body>
+</html>
